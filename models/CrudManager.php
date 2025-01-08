@@ -53,4 +53,3 @@ require_once('./models/connection.php');
 //     }
 //     return $result;
 
-};
