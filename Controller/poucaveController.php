@@ -1,5 +1,5 @@
 <?php
-require_once('./models/articlesManager.php');
+require_once('./models/CrudManager.php');
 
 
 $template = './views/pages/poucave.php';
