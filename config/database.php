@@ -3,7 +3,7 @@
     'db' => 'mysql',
     'host' => 'localhost',
     'port' => '3307',
-    'dbname' => '', 
+    'dbname' => 'btm', 
     'username' => 'root',
     'password' => '', 
  ];
