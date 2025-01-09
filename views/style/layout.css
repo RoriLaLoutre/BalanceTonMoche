@@ -8,6 +8,7 @@ span{
 .navbar{
     background-color: white;
     height: 15vh;
+    box-shadow:0px 0.1px 0.6em rgba(0, 0, 0, 0.502) ;
 }
 ul{
     height: 100%;
@@ -37,13 +38,13 @@ ul{
 }
 
 .navbar a:hover{
-    border-bottom: solid 3px #4ad8ce ;
+    border-bottom: solid 3px #000091 ;
     }
 
 .home{
-    background-color: whitesmoke;
     margin: auto;
     padding: 10vw;
+    padding-top: 5vh;
 }
 
 
@@ -69,4 +70,18 @@ ul{
 
 #btn-poucave:hover{
     background-color: #1212ff ;
+
     }
+
+.gray-box{
+    background-color: #dfdfdf;
+    padding: 50px;
+}
+
+.gray-box h2{
+    margin-bottom: 24px;
+}
+
+.gray-box p{
+    margin-bottom: 24px;
+}
