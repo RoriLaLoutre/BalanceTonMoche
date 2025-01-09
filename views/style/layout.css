@@ -85,3 +85,57 @@ ul{
 .gray-box p{
     margin-bottom: 24px;
 }
+
+.footer{
+    box-sizing: border-box;
+    display: flex;
+    box-shadow:0px -3px 0em #000091;
+    flex-direction: column;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer img{
+    width: 12vw;
+}
+
+.footer p{
+    font-weight:400;
+    font-size:1.45rem;
+    color:rgb(67, 67, 67) ;
+    line-height: 1.5rem;
+}
+
+.footer ul{
+    margin-top: 1rem;
+    list-style: none;
+    font-size:1.3rem ;
+    color:rgb(37, 37, 37) ;
+    box-shadow:0px -1px 0em rgba(129, 129, 129, 0.502) ;
+    padding-top: 15px;
+    gap: 0;
+}
+
+#top-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#top-footer p{
+    margin-right: 10vw;
+}
+
+.footer ul li{
+    color: rgba(49, 49, 49, 0.719);
+    box-shadow: 1px 0px 0em rgba(129, 129, 129, 0.502);
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.footer ul li:nth-child(6){
+    box-shadow: none;
+}
+
