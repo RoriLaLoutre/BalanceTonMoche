@@ -36,8 +36,8 @@ function addMoche($nom , $prenom,$img , $categorie , $note , $pos_long , $pos_la
         $dt = time();
         $date = date( "Y-m-d", $dt );   //a enlever si inutilisé
 
-        $sql = "INSERT INTO signalement (nom, prenom, note, img, pos_long , pos_lat, categorie, date) 
-        VALUES (:nom , :prenom, :note, :img, :pos_long, :pos_lat, :categorie, :date)";
+        $sql = "INSERT INTO signalement (nom, prenom, note, img, pos_long , pos_lat, date, categorie) 
+        VALUES (:nom , :prenom, :note, :img, :pos_long, :pos_lat, :date, :categorie)";
         $query = dbConnect()->prepare($sql);
         $query->execute([
             ':nom' => $nom,
