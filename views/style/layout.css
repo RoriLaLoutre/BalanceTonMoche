@@ -3,8 +3,10 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+span{
+    font-weight: bold;}
 .navbar{
-    background-color: #f1f1f1;
+    background-color: white;
     height: 15vh;
 }
 ul{
@@ -39,6 +41,7 @@ ul{
     }
 
 .home{
+    background-color: whitesmoke;
     margin: auto;
     padding: 10vw;
 }
