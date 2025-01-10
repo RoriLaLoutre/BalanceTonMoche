@@ -3,6 +3,14 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 span{
     font-weight: bold;}
 .navbar{
@@ -138,4 +146,6 @@ ul{
 .footer ul li:nth-child(6){
     box-shadow: none;
 }
+
+
 
