@@ -224,12 +224,57 @@ ul{
     box-shadow: none;
 }
 
+/* Wanted */
+
+/* Style de base pour le conteneur principal */
+.wanted {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Style pour le titre */
+.wanted h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.card-report{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 15vw;
+    height: 45vh;
+    border: dashed 2px #eeeeee;
+    margin-bottom: 10vh;
+    padding: 10px;
+
+}
+.card-report img{
+    width: 10vw;
+    border-radius: 10%;
+}
+
 
 @media (max-width: 768px) {
     .home {
         padding: 5vw; /* Réduit les marges */
     }
 
+    .card-report{
+        width: 70vw;
+        height: 60vh;
+    }
+    .card-report img{
+        width: 50vw;
+    }
     .gray-box {
         padding: 20px; /* Réduit le padding */
     }
@@ -333,40 +378,3 @@ ul{
     }
 }
 
-/* Wanted */
-
-/* Style de base pour le conteneur principal */
-.wanted {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    max-width: 100%;
-    text-align: center;
-}
-
-/* Style pour le titre */
-.wanted h2 {
-    margin-bottom: 30px;
-    font-size: 24px;
-    color: #333;
-    font-weight: bold;
-}
-
-.card-report{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 15vw;
-    height: 45vh;
-    border: dashed 2px #eeeeee;
-    margin-bottom: 10vh;
-    padding: 10px;
-
-}
-.card-report img{
-    width: 10vw;
-    border-radius: 10%;
-}
