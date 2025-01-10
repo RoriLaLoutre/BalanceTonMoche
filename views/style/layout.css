@@ -158,114 +158,6 @@ ul{
 }
 
 
-@media (max-width: 768px) {
-    .home {
-        padding: 5vw; /* Réduit les marges */
-    }
-
-    .gray-box {
-        padding: 20px; /* Réduit le padding */
-    }
-
-    .gray-box h2 {
-        font-size: 1.5rem; /* Réduit la taille des titres */
-    }
-
-    .gray-box p {
-        font-size: 1rem; /* Réduit la taille des paragraphes */
-        line-height: 1.5rem;
-    }
-
-    #btn-poucave {
-        font-size: 1.2rem; /* Taille du bouton réduite */
-        padding: 10px 20px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .home {
-        padding: 7vw; /* Marges adaptées */
-    }
-
-    .gray-box {
-        padding: 30px; /* Padding un peu réduit */
-    }
-
-    .gray-box h2 {
-        font-size: 1.8rem; /* Taille intermédiaire */
-    }
-
-    .gray-box p {
-        font-size: 1.1rem;
-    }
-
-    #btn-poucave {
-        font-size: 1.4rem;
-        padding: 12px 22px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .home {
-        padding: 10vw;
-    }
-
-    .gray-box {
-        padding: 50px;
-    }
-
-    .gray-box h2 {
-        font-size: 2.2rem;
-    }
-
-    .gray-box p {
-        font-size: 1.3rem;
-    }
-
-    #btn-poucave {
-        font-size: 1.7rem;
-        padding: 15px 25px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column; /* Les éléments passent en colonne */
-        align-items: center; /* Centrage des éléments */
-        text-align: center; /* Texte centré */
-    }
-
-    #top-footer {
-        flex-direction: column; /* Change la direction */
-        gap: 1rem; /* Ajoute de l'espace entre les éléments */
-    }
-
-    .footer img {
-        width: 25vw; /* Réduit la taille des images */
-        margin-bottom: 1rem;
-    }
-
-    .footer ul {
-        padding: 0;
-        width: 100%;
-    }
-
-    .footer ul li {
-        padding: 0.5rem 0; /* Réduit les espacements */
-        box-shadow: none; /* Supprime les bordures */
-        font-size: 0.6rem;
-    }
-
-    .footer p {
-        font-size: 1rem; /* Taille réduite du texte */
-    }
-
-    .navbar{
-        font-size: 0.6rem ;
-    }
-}
-
 /* Wanted */
 
 /* Style de base pour le conteneur principal */
@@ -303,3 +195,137 @@ ul{
     width: 10vw;
     border-radius: 10%;
 }
+
+.btn-bleu{
+    background-color: #000091;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    padding-right:25px ;
+    padding-left:25px ;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .wanted .card-report {
+        width: 50vw;
+        height: 50vh;
+    }
+    .card-report img{
+        width: 45vw;
+        border-radius: 10%;
+    }
+    #btn-id{
+        margin: 0;
+    }
+
+    .home {
+        padding: 5vw; /* Réduit les marges */
+    }
+
+    .gray-box {
+        padding: 20px; /* Réduit le padding */
+    }
+
+    .gray-box h2 {
+        font-size: 1.5rem; /* Réduit la taille des titres */
+    }
+
+    .gray-box p {
+        font-size: 1rem; /* Réduit la taille des paragraphes */
+        line-height: 1.5rem;
+    }
+
+    #btn-poucave {
+        font-size: 1.2rem; /* Taille du bouton réduite */
+        padding: 10px 20px;
+    }
+}
+/* Tablette  */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .home {
+        padding: 7vw; /* Marges adaptées */
+    }
+
+    .gray-box {
+        padding: 30px; /* Padding un peu réduit */
+    }
+
+    .gray-box h2 {
+        font-size: 1.8rem; /* Taille intermédiaire */
+    }
+
+    .gray-box p {
+        font-size: 1.1rem;
+    }
+
+    #btn-poucave {
+        font-size: 1.4rem;
+        padding: 12px 22px;
+    }
+}
+/* Grand écran */
+@media (min-width: 1024px) {
+    .home {
+        padding: 10vw;
+    }
+
+    .gray-box {
+        padding: 50px;
+    }
+
+    .gray-box h2 {
+        font-size: 2.2rem;
+    }
+
+    .gray-box p {
+        font-size: 1.3rem;
+    }
+
+    #btn-poucave {
+        font-size: 1.7rem;
+        padding: 15px 25px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Les éléments passent en colonne */
+        align-items: center; /* Centrage des éléments */
+        text-align: center; /* Texte centré */
+    }
+
+    #top-footer {
+        flex-direction: column; /* Change la direction */
+        gap: 1rem; /* Ajoute de l'espace entre les éléments */
+    }
+
+    .footer img {
+        width: 25vw; /* Réduit la taille des images */
+        margin-bottom: 1rem;
+    }
+
+    .footer ul {
+        padding: 0;
+        width: 100%;
+    }
+
+    .footer ul li {
+        padding: 0.5rem 0; /* Réduit les espacements */
+        box-shadow: none; /* Supprime les bordures */
+        font-size: 0.6rem;
+    }
+
+    .footer p {
+        font-size: 1rem; /* Taille réduite du texte */
+    }
+
+    .navbar{
+        font-size: 0.6rem ;
+    }
+}
+
