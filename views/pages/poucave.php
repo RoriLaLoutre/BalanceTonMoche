@@ -4,7 +4,7 @@
         Voici la page de dénonciation pour trouble à l'esthétique publique
     </h1>
 
-    <form action="" method="POST" class="form-delation">
+    <form action="" method="POST" enctype="multipart/form-data" class="form-delation">
 
         <label for="photo">Uploader la photo</label>
         <input type="file" name = "photo" id="photo" >

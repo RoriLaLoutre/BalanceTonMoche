@@ -23,15 +23,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $prenom = ''; 
     }
     
-    if (isset($_FILES['photo']) && $_FILES['photo']['error'] === UPLOAD_ERR_OK) {
-        $file = $_FILES['photo'];
-        $filePath = $file['tmp_name'];
-        move_uploaded_file($filePath, './public/specimenpics/' . $file['name']);
-        $imgPath = './public/specimenpics/' . $file['name'];
-        echo $imgPath;
-    } else {
-        $file = null;
-        $imgPath = null;
+    if (isset($_FILES['photo'])) {
+        $filename = $_FILES['photo']['name'];
+        $folder_location = "public/specimenpics/" .$filename;
+
+        if (move_uploaded_file($_FILES['photo']['tmp_name'], $folder_location)) {
+            $uploaded = true;
+        }
     }
 
     // Validation des données
@@ -39,17 +37,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($categorie)) {
         $errors[] = "La catégorie est obligatoire.";
     }
-    if (empty($nom)) {
-        $errors[] = "Le nom est obligatoire.";
-    }
-    if (empty($prenom)) {
-        $errors[] = "Le prénom est obligatoire.";
-    }
-    if (!$imgPath) {
+    if (!$uploaded) {
         $errors[] = "Une photo est obligatoire.";
     }
 
-    if (empty($errors)) {
+    if (!empty($errors)) {
         foreach ($errors as $error) {
             echo "<p style='color:red;'>$error</p>";
         }
@@ -60,8 +52,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pos_lat = 0;
     $pos_long = 0;
     $note = 1;
-        if(!empty($errors)){
-        addMoche($nom , $prenom,$imgPath, $categorie , $note , $pos_long , $pos_lat);
+        if(empty($errors)){
+        addMoche($nom , $prenom,$folder_location, $categorie , $note , $pos_long , $pos_lat);
         }
 }
 
