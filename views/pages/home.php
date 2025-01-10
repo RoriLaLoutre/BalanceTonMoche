@@ -22,7 +22,7 @@
             Votre engagement pour l'esthétique publique est essentiel !
         </h3>
         <div class="zone-btn">
-            <a href="index?page=poucave" id="btn-poucave">Délafion</a>
+            <a href="index?page=poucave" id="btn-poucave" class="btn-bleu">Délafion</a>
         </div>
     </div>
 </div>

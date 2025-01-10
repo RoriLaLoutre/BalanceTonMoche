@@ -1,26 +1,26 @@
 <?php
 require_once('./models/connection.php');
 
-// function getLastArticles(int $limit):array{
-//     $sql = "SELECT id ,title, description , content , published_at FROM articles order by published_at desc LIMIT :limit";
-//     $query = dbConnect()->prepare($sql);
-//     $query->bindParam(':limit' , $limit , PDO::PARAM_INT);
-//     $query->execute();
-//     return $query->fetchAll();
-// }
+function getLastSignalements(int $limit):array{
+    $sql = "SELECT id ,nom, prenom , note , img , pos_long , pos_lat FROM signalement order by note asc LIMIT :limit";
+    $query = dbConnect()->prepare($sql);
+    $query->bindParam(':limit' , $limit , PDO::PARAM_INT);
+    $query->execute();
+    return $query->fetchAll();
+}
 
-// function getArticle($id) {
-//         $id = intval($id);
-//         $sql = "SELECT title, description , content , published_at FROM articles where id = :id";
-//         $query = dbConnect()->prepare($sql);
-//         $query->bindParam(':id' , $id , PDO::PARAM_INT);
-//         $query->execute();
-//         $article = $query->fetch();
-//         if (!$article) {
-//             return [];
-//         }
-//     return $article;
-// }
+function getSignalement($id) {
+        $id = intval($id);
+        $sql = "SELECT id ,nom, prenom , note , img , pos_long , pos_lat FROM signalement where id = :id";
+        $query = dbConnect()->prepare($sql);
+        $query->bindParam(':id' , $id , PDO::PARAM_INT);
+        $query->execute();
+        $signalement = $query->fetch();
+        if (!$signalement) {
+            return [];
+        }
+    return $signalement;
+}
 
 // function getALLArticleTitle() {
 //     $sql = "SELECT id, title FROM articles";
