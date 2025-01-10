@@ -1,8 +1,9 @@
 <?php
 require_once('./models/CrudManager.php');
-
+require_once('./models/connection.php');
 $template = './views/pages/poucave.php';
-
+$uploaded = false;
+$messageSuccess = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (isset($_POST['categorie']) && ($_POST['categorie'] != '')) {
@@ -48,12 +49,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Valeurs par défaut
+    function tirerUnChiffre() {
+        return rand(1, 10);
+    }
+
     $pos_lat = 0;
     $pos_long = 0;
-    $note = 1;
+    $note = tirerUnChiffre();
+
+
         if(empty($errors)){
-        addMoche($nom , $prenom,$folder_location, $categorie , $note , $pos_long , $pos_lat);
+            addMoche($nom , $prenom,$folder_location, $categorie , $note , $pos_long , $pos_lat);
+            $messageSuccess = "Votre signalement a bien été pris en compte";
+                
         }
 }
 

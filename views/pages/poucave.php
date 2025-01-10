@@ -4,10 +4,11 @@
         Voici la page de dénonciation pour trouble à l'esthétique publique
     </h1>
 
-    <form action="" method="POST" enctype="multipart/form-data" class="form-delation">
+
+    <form action="" method="POST" enctype="multipart/form-data" class="form-delation" accept=".jpg, .jpeg, .png">
 
         <label for="photo">Uploader la photo</label>
-        <input type="file" name = "photo" id="photo" >
+        <input type="file" name = "photo" id="photo" required>
 
         <label for="nom">Nom du spéciment si celui-ci vous est familié</label>
         <input type="text" name = "nom" id="nom" class="insert-input">
@@ -16,7 +17,7 @@
         <input type="text" name = "prenom" id="prenom" class="insert-input">
 
         <label for="prenom">Sélectioner une catégorie </label>
-        <select name="categorie" id="categorie" class="insert-input">
+        <select name="categorie" id="categorie" required class="insert-input">
             <option value="">Choisir une catégorie</option>
             <option value="corp">Corps</option>
             <option value="pied">Pied</option>
@@ -28,12 +29,18 @@
             <option value="global">Esthétique globale</option>
             <option value="other">Autres...</option>
         </select>
-        <div class="form-z-btn">
-            <input type="submit" text="Soumettre" id="btn-soumettre">
-        </div>
+        <div class="end-form">
+
+            <div class="message">
+                <?php if (!empty($messageSuccess)){
+                    echo "<p style='color: green; font-weight: bold; font-size: 16px'>$messageSuccess</p>"; 
+                }
+                ?>
+            </div>
+            <div class="form-z-btn">
+                <input type="submit" text="Soumettre" id="btn-soumettre">
+            </div>
 
     </form>
-
-
 
 </div>

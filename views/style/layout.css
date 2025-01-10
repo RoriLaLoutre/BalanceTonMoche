@@ -121,6 +121,18 @@ ul{
     width: 100%;
     justify-content: flex-end;
 }
+
+.message{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin: 10vh 0;
+}
+
+.end-form{
+    display: flex;
+    flex-direction: row;
+}
 .form-delation #btn-soumettre{
     background-color: #000091;
     color: white;
