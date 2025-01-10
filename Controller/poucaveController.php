@@ -1,8 +1,69 @@
 <?php
 require_once('./models/CrudManager.php');
-
-
+require_once('./models/connection.php');
 $template = './views/pages/poucave.php';
+$uploaded = false;
+$messageSuccess = "";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    if (isset($_POST['categorie']) && ($_POST['categorie'] != '')) {
+        $categorie = htmlspecialchars($_POST['categorie']);
+    } else {
+        $categorie = ''; 
+    }
+
+    if (isset($_POST['nom'])) {
+        $nom = htmlspecialchars($_POST['nom']);
+    } else {
+        $nom = ''; 
+    }
+
+    if (isset($_POST['prenom'])) {
+        $prenom = htmlspecialchars($_POST['prenom']);
+    } else {
+        $prenom = ''; 
+    }
+    
+    if (isset($_FILES['photo'])) {
+        $filename = $_FILES['photo']['name'];
+        $folder_location = "public/specimenpics/" .$filename;
+
+        if (move_uploaded_file($_FILES['photo']['tmp_name'], $folder_location)) {
+            $uploaded = true;
+        }
+    }
+
+    // Validation des données
+    $errors = [];
+    if (empty($categorie)) {
+        $errors[] = "La catégorie est obligatoire.";
+    }
+    if (!$uploaded) {
+        $errors[] = "Une photo est obligatoire.";
+    }
+
+    if (!empty($errors)) {
+        foreach ($errors as $error) {
+            echo "<p style='color:red;'>$error</p>";
+        }
+        exit;
+    }
+
+    function tirerUnChiffre() {
+        return rand(1, 10);
+    }
+
+    $pos_lat = 0;
+    $pos_long = 0;
+    $note = tirerUnChiffre();
+
+
+        if(empty($errors)){
+            addMoche($nom , $prenom,$folder_location, $categorie , $note , $pos_long , $pos_lat);
+            $messageSuccess = "Votre signalement a bien été pris en compte";
+                
+        }
+}
 
 
 

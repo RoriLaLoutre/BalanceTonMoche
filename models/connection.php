@@ -13,3 +13,8 @@ function dbConnect(){
     return $db;
     
  }
+
+function redirect(string $page): void {
+    header("Location: http://localhost/BalanceTonMoche/?page=".$page);
+    exit;
+}

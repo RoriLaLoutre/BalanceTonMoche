@@ -32,24 +32,23 @@ function getSignalement($id) {
 //     }
 // return $articles;
 // }
-// function addArticle(): bool{
-//     $result = false;
-//     $error_mess = "";
-//     if (!empty($_POST['title'])  && (!empty($_POST['description']) && (!empty($_POST['content']))) ){
-//         $dt = time();
-//         $date = date( "Y-m-d H:i:s", $dt );
+function addMoche($nom , $prenom,$img , $categorie , $note , $pos_long , $pos_lat){
+        $dt = time();
+        $date = date( "Y-m-d", $dt );   //a enlever si inutilisé
 
-//         $sql = "INSERT INTO articles (title, description, content, published_at) 
-//         VALUES (:title , :description, :content, :published_at)";
+        $sql = "INSERT INTO signalement (nom, prenom, note, img, pos_long , pos_lat, date, categorie) 
+        VALUES (:nom , :prenom, :note, :img, :pos_long, :pos_lat, :date, :categorie)";
+        $query = dbConnect()->prepare($sql);
+        $query->execute([
+            ':nom' => $nom,
+            ':prenom' => $prenom,
+            ':note' => $note,
+            ':img' => $img,
+            ':pos_long' => $pos_long,
+            ':pos_lat' => $pos_lat,
+            ':categorie' => $categorie,
+            ':date' => $date,
+        ]);
 
-//         $query = dbConnect()->prepare($sql);
-//         $query->execute([
-//             ':title' => $_POST['title'],
-//             ':description' => $_POST['description'],
-//             ':content' => $_POST['content'],
-//             ':published_at' => $date,
-//         ]);
-//         $result = true;
-//     }
-//     return $result;
 
+}
