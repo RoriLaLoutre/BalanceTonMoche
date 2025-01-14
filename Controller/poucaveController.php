@@ -49,13 +49,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    function tirerUnChiffre() {
-        return rand(1, 10);
+    function nombreAleatoire() {
+        return round(mt_rand() / mt_getrandmax() * (10 - 1) + 1, 2);
     }
 
     $pos_lat = 0;
     $pos_long = 0;
-    $note = tirerUnChiffre();
+    $note = nombreAleatoire();
 
 
         if(empty($errors)){
