@@ -2,7 +2,7 @@
 require_once('./models/connection.php');
 
 function getLastSignalements(int $limit):array{
-    $sql = "SELECT id ,nom, prenom , note , img , pos_long , pos_lat FROM signalement order by note asc LIMIT :limit";
+    $sql = "SELECT id ,nom, prenom , note , img , pos_long , pos_lat FROM signalement where note <= 5 order by note asc limit :limit";
     $query = dbConnect()->prepare($sql);
     $query->bindParam(':limit' , $limit , PDO::PARAM_INT);
     $query->execute();
@@ -11,7 +11,7 @@ function getLastSignalements(int $limit):array{
 
 function getSignalement($id) {
         $id = intval($id);
-        $sql = "SELECT id ,nom, prenom , note , img , pos_long , pos_lat FROM signalement where id = :id";
+        $sql = "SELECT id ,nom, prenom , note , img , pos_long , pos_lat FROM signalement order by note asc limit :id";
         $query = dbConnect()->prepare($sql);
         $query->bindParam(':id' , $id , PDO::PARAM_INT);
         $query->execute();
@@ -52,3 +52,22 @@ function addMoche($nom , $prenom,$img , $categorie , $note , $pos_long , $pos_la
 
 
 }
+
+function getNotesMoyennesParCategorie(): array {
+    $sql = "SELECT categorie, AVG(note) AS moyenne_note 
+            FROM signalement 
+            GROUP BY categorie 
+            ORDER BY moyenne_note asc";
+
+    try {
+        $db = dbConnect(); // Connexion à la base de données
+        $query = $db->prepare($sql);
+        $query->execute();
+        return $query->fetchAll(PDO::FETCH_ASSOC); // Retourne les résultats
+    } catch (PDOException $e) {
+        error_log("Erreur dans getNotesMoyennesParCategorie: " . $e->getMessage());
+        return [];
+    }
+}
+
+$data = getNotesMoyennesParCategorie();
