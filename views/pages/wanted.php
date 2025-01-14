@@ -9,10 +9,10 @@
                     <?= $the_report["note"]?> / 10
                 </p>
                 <p class="rank">
-                    <?=categorisation(round($the_report["note"]), $dangerLvl);?>
+                    <?=titre($the_report["note"],$dangerLvl);?>
                 </p>
                 <?php 
-                $prime = prime(round($the_report["note"]), $dangerLvl);
+                $prime = prime($the_report["note"], $dangerLvl);
                 if ($prime > 0) { ?>
                     <p class="prime">
                         Prime: <?= $prime; ?> €
