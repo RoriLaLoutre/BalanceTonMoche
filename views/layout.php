@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $seo['title'] ?></title>
     <link rel="stylesheet" href="style/404.css">
+    <script src="./public/script/uploadPhoto.js" defer></script>
     <link rel="stylesheet" href="public/css/app.css">
     <meta name="description" content=<?= $seo["description"] ?>>
 </head>

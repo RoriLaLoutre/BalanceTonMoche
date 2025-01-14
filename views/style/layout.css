@@ -309,6 +309,26 @@ main{
     position: relative;
 }
 
+/* Form add style */
+#photo-view{
+    background-color: #eeee;
+    height: 10vh;
+    color: #afafaf;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#photo-preview{
+    height: 75%;
+}
+#photo{
+    display: none;
+}
+.form-delation h4{
+    text-align: center;
+}
 
 @media (max-width: 768px) {
     .home {
