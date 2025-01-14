@@ -17,6 +17,15 @@ $dangerLvl = [
     ["Parfait", 0]
 ];
 
+function categorisation($note,$dangerLvl) :string{
+    return $dangerLvl[$note][0];
+};
+
+function prime($note,$dangerLvl) :string{
+    return $dangerLvl[$note][1];
+};
+
+
 
 $template = './views/pages/wanted.php';
 
