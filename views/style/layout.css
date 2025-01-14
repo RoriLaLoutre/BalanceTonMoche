@@ -5,10 +5,9 @@
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 1fr auto; /* Le footer reste en bas */
+    min-height: 100vh;
 }
 
 .navbar, .footer {
@@ -47,6 +46,9 @@ ul{
     font-family: Arial, Helvetica, sans-serif;
     border-bottom: solid 3px transparent; /* Bordure invisible par défaut */
     transition: border-color 0.3s ease; /* Transition sur la couleur de la bordure */
+    height: 4vh;
+    display: flex;
+    align-items: flex-start;
     
 }
 
@@ -58,6 +60,10 @@ ul{
     margin: auto;
     padding: 10vw;
     padding-top: 5vh;
+}
+
+main{
+    padding-bottom: 4vh;
 }
 
 
@@ -266,6 +272,11 @@ ul{
 @media (max-width: 768px) {
     .home {
         padding: 5vw; /* Réduit les marges */
+    }
+
+    .navbar img{
+        padding-bottom: 2vh;
+        height: 8vh;
     }
 
     .card-report{
