@@ -2,7 +2,7 @@
 require_once('./models/connection.php');
 
 function getLastSignalements(int $limit):array{
-    $sql = "SELECT id ,nom, prenom , note , img , pos_long , pos_lat FROM signalement order by note asc LIMIT :limit";
+    $sql = "SELECT id ,nom, prenom , note , img , pos_long , pos_lat FROM signalement where note <= 5 order by note asc limit :limit";
     $query = dbConnect()->prepare($sql);
     $query->bindParam(':limit' , $limit , PDO::PARAM_INT);
     $query->execute();
