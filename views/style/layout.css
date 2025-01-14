@@ -269,6 +269,47 @@ main{
 }
 
 
+/* Stat :  */
+
+/* Stat */
+.analyse .graph-container {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.analyse .bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.analyse .bar-label {
+    width: 20%;
+    text-transform: capitalize;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.analyse .bar-value { 
+    height: 20px;
+    background-color: #000091;
+    color: white;
+    text-align: right;
+    padding-right: 5px;
+    line-height: 20px;
+}
+
+.analyse .bar-container {
+    width: 75%;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+
 @media (max-width: 768px) {
     .home {
         padding: 5vw; /* Réduit les marges */
