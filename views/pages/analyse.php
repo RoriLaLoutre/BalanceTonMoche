@@ -4,7 +4,7 @@
             <?php
             foreach($lastSignalements as $the_report){ ?>
             <div class="card-report">
-                <img src="<?= $the_report["img"]?>" alt="Report_<?= $the_report["id"]?>_<?= $the_report["nom"]?>_<?= $the_report["prenom"]?>">
+                <img src="<?= $the_report["img"]?>" alt="Report_<?= $the_report["id"]?>_<?= $the_report["nom"]?>_<?= $the_report["nom"]?>">
                 <p>
                     <?= $the_report["note"]?>
                 </p>
