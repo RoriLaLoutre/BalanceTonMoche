@@ -44,3 +44,51 @@
     </form>
 
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const btnSoumettre = document.getElementById('btn-soumettre');
+    const posLatInput = document.createElement('input');
+    const posLongInput = document.createElement('input');
+
+    // Create hidden inputs for latitude and longitude
+    posLatInput.type = 'hidden';
+    posLatInput.name = 'pos_lat';
+    posLatInput.id = 'pos_lat';
+
+    posLongInput.type = 'hidden';
+    posLongInput.name = 'pos_long';
+    posLongInput.id = 'pos_long';
+
+    // Add the hidden inputs to the form
+    const form = document.querySelector('.form-delation');
+    form.appendChild(posLatInput);
+    form.appendChild(posLongInput);
+
+    // Request location when the user clicks the submit button
+    btnSoumettre.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    // If the user agrees, populate the hidden inputs
+                    document.getElementById('pos_lat').value = position.coords.latitude;
+                    document.getElementById('pos_long').value = position.coords.longitude;
+
+                    // Submit the form after location is retrieved
+                    form.submit();
+                },
+                (error) => {
+                    // If the user denies, allow form submission without location
+                    console.warn('Location permission denied or error occurred.');
+                    form.submit();
+                }
+            );
+        } else {
+            // If geolocation is not supported, submit the form without location
+            console.warn('Geolocation is not supported by this browser.');
+            form.submit();
+        }
+    });
+});
+</script>

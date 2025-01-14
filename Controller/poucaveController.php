@@ -5,7 +5,9 @@ $template = './views/pages/poucave.php';
 $uploaded = false;
 $messageSuccess = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
+    $pos_lat = isset($_POST['pos_lat']) ? htmlspecialchars($_POST['pos_lat']) : 0;
+    $pos_long = isset($_POST['pos_long']) ? htmlspecialchars($_POST['pos_long']) : 0;
+    
     if (isset($_POST['categorie']) && ($_POST['categorie'] != '')) {
         $categorie = htmlspecialchars($_POST['categorie']);
     } else {
@@ -52,9 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     function nombreAleatoire() {
         return round(mt_rand() / mt_getrandmax() * (10 - 1) + 1, 2);
     }
-
-    $pos_lat = 0;
-    $pos_long = 0;
     $note = nombreAleatoire();
 
 
