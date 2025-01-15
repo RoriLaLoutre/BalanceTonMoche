@@ -1,7 +1,7 @@
 <div class="analyse">
         <h2 id="title" class="margin-bottom">Nos statistiques et résultats</h2>
         <div class="graph-container">
-        <h2 class="margin-bottom">Graphique en bâtons - Notes moyennes Par catégorie</h2>
+        <h2 class="margin-bottom" id="title2">Graphique en bâtons - Notes moyennes Par catégorie</h2>
 
         <?php foreach ($data as $row): 
             $barWidth = ($row['moyenne_note'] / 10) * 100; 
@@ -22,12 +22,9 @@
     </div>
     <div class ="parent-stats">
         <div class="stats-container">
-            <div class = "grid-item"></div>
-            <div class = "grid-item"></div>
-            <div class = "grid-item"></div>
-            <div class = "grid-item"></div>
-            <div class = "grid-item"></div>
-            <div class = "grid-item"></div>
+            <div class = "grid-item"><?=' Note Moyenne : ' . (string)$moyenne ?></div>
+            <div class = "grid-item">Prime Totale versée : 14 560 465</div>
+            <div class = "grid-item">Arrestation Réussie : 6489</div>
         </div>
     </div>
     </div>
