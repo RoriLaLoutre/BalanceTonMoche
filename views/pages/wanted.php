@@ -20,7 +20,7 @@
                 <?php } ?>
                 <img src="<?= $the_report["img"]?>" alt="Report_<?= $the_report["id"]?>_<?= $the_report["nom"]?>_<?= $the_report["prenom"]?>">
                 <div class="zone-btn">
-                    <a href="#" id="btn-id" class ="btn-bleu">A propos</a>
+                    <a href="index.php?page=personneInfo&id=<?= $the_report['id']?>" id="btn-id" class ="btn-bleu">A propos</a>
                 </div>
             </div>
             <?php
