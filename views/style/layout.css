@@ -398,11 +398,8 @@ main{
 
 /* Info  */
 #info{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 10vw;
+    width: 65vw;
+    margin: auto;
 }
 #info h4{
     font-size: 1.5rem;
@@ -412,7 +409,22 @@ main{
 #info .info-photo{
     height: 50vh;
 }
+.card-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10vw;
+    background-color: #eeee;
 
+}
+#map{
+    height: 50vh;
+    width: 65vw;
+}
+.info-coord{
+    display: none;
+}
 @media (max-width: 768px) {
     .home {
         padding: 5vw; /* Réduit les marges */

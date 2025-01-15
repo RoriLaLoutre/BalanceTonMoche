@@ -5,8 +5,8 @@ $template = './views/pages/poucave.php';
 $uploaded = false;
 $messageSuccess = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $pos_lat = isset($_POST['pos_lat']) ? htmlspecialchars($_POST['pos_lat']) : 0;
-    $pos_long = isset($_POST['pos_long']) ? htmlspecialchars($_POST['pos_long']) : 0;
+    $pos_lat = isset($_POST['pos_lat']) ? htmlspecialchars($_POST['pos_lat']) : null;
+    $pos_long = isset($_POST['pos_long']) ? htmlspecialchars($_POST['pos_long']) : null;
     
     if (isset($_POST['categorie']) && ($_POST['categorie'] != '')) {
         $categorie = htmlspecialchars($_POST['categorie']);
