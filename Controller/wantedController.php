@@ -6,8 +6,8 @@ $lastSignalements = getLastSignalements(15);
 $dangerLvl = [
     ["Danger de sureté nationale", 100000],
     ["Délit de faciès", 2500],
-    ["Vraiment moche", 500],
-    ["Pique les yeux", 150],
+    ["Irritation Oculaire", 500],
+    ["Vraiment moche", 150],
     ["Cheum", 25],
     ["Moyen", 0],
     ["Beau", 0],
