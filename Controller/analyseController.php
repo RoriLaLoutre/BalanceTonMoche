@@ -1,7 +1,12 @@
 <?php
 require_once('./models/CrudManager.php');
 
-$lastSignalements = getLastSignalements(5);
+
+$data = getNotesMoyennesParCategorie();
+$moyenne = round(getNotesMoyenne(), 2);
+
+
+
 
 
 $template = './views/pages/analyse.php';

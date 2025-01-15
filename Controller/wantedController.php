@@ -6,23 +6,26 @@ $lastSignalements = getLastSignalements(15);
 $dangerLvl = [
     ["Danger de sureté nationale", 100000],
     ["Délit de faciès", 2500],
-    ["Vraiment moche", 500],
-    ["Pique les yeux", 150],
+    ["Irritation Oculaire", 500],
+    ["Vraiment moche", 150],
     ["Cheum", 25],
     ["Moyen", 0],
     ["Beau", 0],
     ["Très beau", 0],
     ["Sublime", 0],
-    ["Magnifique", 0],
     ["Parfait", 0]
 ];
 
-function categorisation($note,$dangerLvl) :string{
-    return $dangerLvl[$note][0];
+function categorisation($note) :int{
+    return intval($note,1);
 };
 
-function prime($note,$dangerLvl) :string{
-    return $dangerLvl[$note][1];
+function titre($note,$dangerLvl) :string{
+    return $dangerLvl[categorisation($note)][0];
+};
+
+function prime($note,$dangerLvl) :int{
+    return $dangerLvl[categorisation($note)][1];
 };
 
 

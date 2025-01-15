@@ -70,4 +70,18 @@ function getNotesMoyennesParCategorie(): array {
     }
 }
 
-$data = getNotesMoyennesParCategorie();
+function getNotesMoyenne(): float {
+    $sql = "SELECT AVG(note) AS moyenne FROM signalement";
+    try {
+        $db = dbConnect();
+        $query = $db->prepare($sql);
+        $query->execute();
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        
+        return $result['moyenne'] !== null ? (float)$result['moyenne'] : 0.0;
+    } catch (PDOException $e) {
+        error_log("Erreur dans getNotesMoyenne: " . $e->getMessage());
+        return 0.0; 
+    }
+}
+
