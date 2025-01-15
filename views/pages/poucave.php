@@ -5,10 +5,10 @@
     </h1>
 
 
-    <form action="" method="POST" enctype="multipart/form-data" class="form-delation" accept=".jpg, .jpeg, .png">
+    <form action="" method="POST" enctype="multipart/form-data" class="form-delation">
         <h4>Renseignement du moche</h4>
         <label for="photo"></label>
-        <input type="file" name = "photo" id="photo" required>
+        <input type="file" name = "photo" id="photo" required accept=".jpg, .jpeg, .png">
         <div id="photo-view">
             <img src="public/img/add.png" alt="Photo de la dénonciation" id="photo-preview">
             <p>Ajouter la photo du moche</p>
