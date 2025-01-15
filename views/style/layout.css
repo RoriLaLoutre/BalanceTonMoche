@@ -230,43 +230,6 @@ main{
     box-shadow: none;
 }
 
-/* Wanted */
-
-/* Style de base pour le conteneur principal */
-.wanted {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    max-width: 100%;
-    text-align: center;
-}
-
-/* Style pour le titre */
-.wanted h2 {
-    margin-bottom: 30px;
-    font-size: 24px;
-    color: #333;
-    font-weight: bold;
-}
-
-.card-report{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 15vw;
-    height: 45vh;
-    border: dashed 2px #eeeeee;
-    margin-bottom: 10vh;
-    padding: 10px;
-
-}
-.card-report img{
-    width: 10vw;
-    border-radius: 10%;
-}
 
 
 /* Stat :  */
@@ -329,6 +292,86 @@ main{
 .form-delation h4{
     text-align: center;
 }
+
+/* Wanted */
+
+.wanted {
+    margin: auto;
+    margin-top: 5vh ;
+    width: 60vw;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wanted h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#wanted-header {
+    display: flex;
+    flex-direction: column; /* Affiche les éléments en une seule colonne */
+    gap: 20px; /* Espace entre chaque boîte */
+}
+
+.box-wanted {
+    display: grid;
+    margin: auto;
+    grid-template-areas:
+        "top-left top-right"
+        "bottom-left bottom-right";
+    grid-template-columns: 1fr 1fr; /* Deux colonnes dans chaque boîte */
+    gap: 10px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    width: 80%; /* Occupe toute la largeur du conteneur */
+}
+
+.box-wanted .top-left {
+    grid-area: top-left;
+    font-weight: bold;
+    font-size: 3.2em;
+    color: #f00;
+    align-self: center;
+    justify-self: center;
+}
+
+.box-wanted .top-right {
+    grid-area: top-right;
+    text-align: center;
+}
+
+.box-wanted .top-right img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.box-wanted .bottom-left {
+    grid-area: bottom-left;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.box-wanted .bottom-right {
+    grid-area: bottom-right;
+    text-align: center;
+}
+
+
+
+#map{
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Media Queries */
 
 @media (max-width: 768px) {
     .home {
