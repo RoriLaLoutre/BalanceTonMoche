@@ -277,6 +277,14 @@ main{
     margin: 20px auto;
     border: 1px solid #ddd;
     padding: 20px;
+    background-color: #dfdfdf;
+}
+
+#title{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 
 .analyse .bar {
@@ -304,7 +312,7 @@ main{
 
 .analyse .bar-container {
     width: 75%;
-    background-color: #f4f4f4;
+    background-color: #a7a7a7;
     border: 1px solid #ddd;
     position: relative;
 }

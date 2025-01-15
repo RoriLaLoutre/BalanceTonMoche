@@ -1,5 +1,5 @@
 <div class="analyse">
-        <h2>Quelques stats :</h2>
+        <h2 id="title">Nos statistiques et résultats</h2>
         <div class="graph-container">
         <h2>Graphique en bâtons - Notes moyennes Par catégorie</h2>
 
