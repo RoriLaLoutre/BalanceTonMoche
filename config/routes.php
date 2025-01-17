@@ -13,22 +13,22 @@ const AVLAIBLE_ROUTES = [
                 ]],
     "wanted" => ["template" => "wantedController.php",
                 "seo" => [
-                    "title" => "wanted",
-                    "description" => "Page wanted"
+                    "title" => "Chiasse à l'homme",
+                    "description" => "Page chiasse à l'homme"
                 ]],
     "poucave" => ["template" => "poucaveController.php",
                 "seo" => [
-                    "title" => "poucave",
-                    "description" => "Page poucave"
+                    "title" => "Délafion",
+                    "description" => "Page délafion"
                 ]],
     "analyse" => ["template" => "analyseController.php",
                 "seo" => [
-                    "title" => "analyse",
+                    "title" => "Analyse",
                     "description" => "Page analyse"
                 ]],
     "personneInfo" => ["template" => "personneInfoController.php",
                 "seo" => [
-                    "title" => "personneInfo",
+                    "title" => "Détail",
                     "description" => "Page personneInfo"
                 ]],
    
