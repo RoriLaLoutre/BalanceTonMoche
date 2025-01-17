@@ -1,10 +1,5 @@
+<link rel="stylesheet" href="views/style/layouts/home.css">
 <div class="home">
-    <!-- <h2>Vous en avez marre de croiser que des moches ?</h2>
-    <p>
-        C’est l’heure de prendre les choses en main !
-        Grâce à notre app révolutionnaire, signalez les spécimens qui vous font froncer les sourcils.
-         Un simple clic, une photo, et hop, vous contribuez à une base de données mondiale de la beauté… ou pas ! 
-    </p> -->
     <div class="gray-box">
         <h2>
             Bienvenue sur le portail officiel de signalement des normes esthétiques publiques

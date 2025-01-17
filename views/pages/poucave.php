@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="views/style/layouts/poucave.css">
 <div id="poucave">
 
     <h1>
@@ -54,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const posLatInput = document.createElement('input');
     const posLongInput = document.createElement('input');
 
-    // Create hidden inputs for latitude and longitude
     posLatInput.type = 'hidden';
     posLatInput.name = 'pos_lat';
     posLatInput.id = 'pos_lat';

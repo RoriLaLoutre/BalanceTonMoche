@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="views/style/layouts/analyse.css">
 <div class="analyse">
         <h2 id="title" class="margin-bottom">Nos statistiques et résultats</h2>
         <div class="graph-container">
