@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/404.css">
     <script src="./public/script/uploadPhoto.js" defer></script>
     <script src="./public/script/map.js" defer></script>
+    <link rel="shortcut icon" href="./public/img/icon_balancemoche.png" type="image/x-icon">
 
     <link rel="stylesheet" href="public/css/app.css">
 
