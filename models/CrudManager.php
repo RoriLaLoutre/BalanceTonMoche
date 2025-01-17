@@ -11,7 +11,7 @@ function getLastSignalements(int $limit):array{
 
 function getSignalement($id) {
         $id = intval($id);
-        $sql = "SELECT id ,nom, prenom , note , img , pos_long , pos_lat FROM signalement where id = :id";
+        $sql = "SELECT id ,nom, prenom , note ,categorie , img , pos_long , pos_lat FROM signalement where id = :id";
         $query = dbConnect()->prepare($sql);
         $query->bindParam(':id' , $id , PDO::PARAM_INT);
         $query->execute();

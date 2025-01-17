@@ -1,6 +1,6 @@
 <?php
 require_once('./models/CrudManager.php');
-// require_once("./models/response.php");
+require_once("wantedController.php");
 
 
 $template = './views/pages/personneInfo.php';
