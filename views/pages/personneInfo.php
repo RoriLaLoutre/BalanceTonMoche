@@ -1,5 +1,7 @@
 <div id="info">
     <div class="card-info">
+        
+
         <img class="info-photo" src="<?= $the_report["img"]?>" alt="Report_<?= $the_report["id"]?>_<?= $the_report["nom"]?>_<?= $the_report["prenom"]?>">
         <div>
             <h4><?= $the_report['note'] ?></h4>
