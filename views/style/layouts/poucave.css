@@ -103,3 +103,68 @@ html, body {
         width: 50vw;
     }
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    #poucave {
+        width: 70vw;
+    }
+
+    #poucave h1 {
+        font-size: 1.2rem;
+    }
+
+    .form-delation {
+        padding: 3vh 3vw;
+    }
+
+    #btn-soumettre {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #poucave {
+        width: 85vw;
+    }
+
+    .form-delation {
+        gap: 15px;
+    }
+
+    #photo-view {
+        height: 8vh;
+    }
+
+    .insert-input,
+    select {
+        height: 4vh;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #poucave {
+        width: 95vw;
+    }
+
+    #poucave h1 {
+        font-size: 1rem;
+    }
+
+    .form-delation {
+        padding: 2vh 2vw;
+    }
+
+    #btn-soumettre {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+
+    .insert-input,
+    select {
+        height: 3.5vh;
+        font-size: 0.8rem;
+    }
+}
