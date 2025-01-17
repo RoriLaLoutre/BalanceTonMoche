@@ -68,7 +68,7 @@ main{
 
 
 .zone-btn{
-    margin-top: 10vh;
+    margin-top: 1vh;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -258,7 +258,7 @@ main{
     justify-content: space-around;
     width: 15vw;
     height: 45vh;
-    border: dashed 2px #eeeeee;
+    box-shadow: 1px -1px 0.3em black ;
     margin-bottom: 10vh;
     padding: 10px;
 
