@@ -22,7 +22,7 @@
         <input type="text" name = "prenom" id="prenom" class="insert-input">
 
         <label for="prenom">Sélectioner une catégorie </label>
-        <select name="categorie" id="categorie" required class="insert-input">
+        <select name="categorie" id="categorie" class="insert-input">
             <option value="">Choisir une catégorie</option>
             <option value="corp">Corps</option>
             <option value="pied">Pied</option>
