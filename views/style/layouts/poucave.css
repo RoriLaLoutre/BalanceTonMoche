@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+}
+
+#poucave{
+    margin: auto;
+    width: 41.5vw;
+}
+
+#poucave h1{
+    font-size: 1.5rem;
+    margin:5vh 0;
+}
+.form-delation{
+    padding: 5vh 5vw;
+    background-color: #dfdfdf;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-delation label{
+    margin: 2vh 0;
+}
+
+.form-delation .insert-input{
+    background-color: #eeee;
+    border: none;
+    border-bottom: 2px solid black;
+    height: 5vh;
+}
+
+.form-z-btn{
+    margin: 10vh 0;
+
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.message{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin: 10vh 0;
+}
+
+.end-form{
+    display: flex;
+    flex-direction: row;
+}
+.form-delation #btn-soumettre{
+    background-color: #000091;
+    color: white;
+    padding: 15px;
+    border: none;
+    padding-right:25px ;
+    padding-left:25px ;
+
+}
+
+.form-delation #photo{
+    
+    background-color: #eeee;
+    border-bottom: 2px solid black;
+
+
+}
+
+#photo-view{
+    background-color: #eeee;
+    height: 10vh;
+    color: #afafaf;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#photo-preview{
+    height: 75%;
+}
+#photo{
+    display: none;
+}
+.form-delation h4{
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .card-report{
+        width: 70vw;
+        height: 60vh;
+    }
+    .card-report img{
+        width: 50vw;
+    }
+}
