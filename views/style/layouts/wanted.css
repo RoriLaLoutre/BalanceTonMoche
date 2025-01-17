@@ -67,3 +67,45 @@ html, body {
     width: 10vw;
     border-radius: 10%;
 }
+
+@media (max-width: 1024px) {
+    .card-report {
+        width: 20vw;
+        height: 40vh;
+    }
+
+    .card-report img {
+        width: 12vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-report {
+        width: 30vw;
+        height: auto;
+    }
+
+    .card-report img {
+        width: 20vw;
+    }
+
+    .wanted h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-report {
+        width: 80vw;
+        padding: 15px;
+        margin-bottom: 5vh;
+    }
+
+    .card-report img {
+        width: 80%;
+    }
+
+    .wanted h2 {
+        font-size: 18px;
+    }
+}
