@@ -93,3 +93,13 @@ html, body {
 .form-delation h4{
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .card-report{
+        width: 70vw;
+        height: 60vh;
+    }
+    .card-report img{
+        width: 50vw;
+    }
+}
