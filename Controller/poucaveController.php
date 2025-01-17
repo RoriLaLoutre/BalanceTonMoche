@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['categorie']) && ($_POST['categorie'] != '')) {
         $categorie = htmlspecialchars($_POST['categorie']);
     } else {
-        $categorie = ''; 
+        $categorie = 'Esthétique Générale'; 
     }
 
     if (isset($_POST['nom'])) {
