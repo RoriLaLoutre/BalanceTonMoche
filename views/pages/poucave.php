@@ -15,10 +15,10 @@
             <p>Ajouter la photo du moche</p>
         </div>
 
-        <label for="nom">Nom du spéciment si celui-ci vous est familié</label>
+        <label for="nom">Nom du spéciment si celui-ci vous est familier</label>
         <input type="text" name = "nom" id="nom" class="insert-input">
 
-        <label for="prenom">Prenom du spéciment si celui-ci vous est familié</label>
+        <label for="prenom">Prenom du spéciment si celui-ci vous est familier</label>
         <input type="text" name = "prenom" id="prenom" class="insert-input">
 
         <label for="prenom">Sélectioner une catégorie </label>
