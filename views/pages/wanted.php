@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="views/style/layouts/wanted.css">
 <div class="wanted">
         <h2>Les plus recherchés :</h2>
         <div class="zone-wanted">
